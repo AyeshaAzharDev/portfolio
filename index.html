@@ -771,20 +771,174 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 680px) {
+    @media (max-width: 1024px) {
+      nav {
+        padding: 0 20px;
+      }
+
+      .section {
+        padding: 72px 20px;
+      }
+
+      .about-grid,
+      .contact-layout {
+        gap: 28px;
+      }
+
+      .hero-stat {
+        padding: 14px 20px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        height: auto;
+        min-height: 64px;
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .nav-logo {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      #home {
+        min-height: calc(100vh - 84px);
+      }
 
       .about-grid,
       .contact-layout {
         grid-template-columns: 1fr;
       }
 
-      .nav-links a {
-        padding: 6px 10px;
-        font-size: 13px;
+      .about-card {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 680px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      #home {
+        padding: 64px 16px 88px;
+      }
+
+      .hero-tag {
+        letter-spacing: 2px;
+        padding: 7px 16px;
+      }
+
+      .hero-role {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-role-typed {
+        min-width: 0;
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        max-width: 100%;
+        font-size: 0.98em;
+        line-height: 1.65;
+        margin-bottom: 28px;
+      }
+
+      .hero-btns {
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 34px;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(245,158,11,0.15);
+        width: min(280px, 100%);
+      }
+
+      .hero-stat:last-child {
+        border-bottom: none;
+      }
+
+      .hero-scroll {
+        bottom: 16px;
+      }
+
+      .section {
+        padding: 56px 16px;
+      }
+
+      .section-title {
+        margin-bottom: 28px;
+      }
+
+      .skills-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .skills-table th,
+      .skills-table td {
+        padding: 12px 14px;
+        white-space: nowrap;
       }
 
       .skill-bar-wrap {
-        width: 120px;
+        width: 130px;
+      }
+
+      .contact-detail {
+        align-items: flex-start;
+      }
+
+      .contact-detail span,
+      .contact-detail a {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-links a {
+        padding: 6px 8px;
+        font-size: 12px;
+      }
+
+      .hero-name {
+        font-size: clamp(2.2em, 12vw, 2.8em);
+      }
+
+      .hero-tag {
+        font-size: 11px;
+      }
+
+      .section-label {
+        letter-spacing: 3px;
       }
     }
   </style>
